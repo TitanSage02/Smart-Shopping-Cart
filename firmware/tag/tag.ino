@@ -1,13 +1,16 @@
 #include <BLEDevice.h>
 #include <BLEUtils.h>
 #include <BLEServer.h>
- 
+
+#define DEVICE_NAME "Tag_BLE"
+
+
 void setup() {
     Serial.begin(115200);
     Serial.println("Démarrage du périphérique BLE avec adresse MAC personnalisée");
     
     // Initialisation du BLE et création d'un serveur BLE
-    BLEDevice::init("Panier_BLE");
+    BLEDevice::init(DEVICE_NAME);
  
     // Création d'un serveur BLE
     BLEServer *pServer = BLEDevice::createServer();
