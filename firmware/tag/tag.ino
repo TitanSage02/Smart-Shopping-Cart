@@ -14,7 +14,7 @@ void setup() {
     
     // Configuration de la publicité BLE
     BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
-    pAdvertising->setScanResponse(true); // Active la réponse au scan (optionnel)
+    pAdvertising->setScanResponse(true);  // Active la réponse au scan (optionnel)
     pAdvertising->setMinPreferred(0x06);  // Optimisation pour certains smartphones (iOS notamment)
     pAdvertising->setMinPreferred(0x12);
     
